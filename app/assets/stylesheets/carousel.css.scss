@@ -1,0 +1,308 @@
+/* Carousel base class */
+.carousel
+{
+	width: 699px;
+	height: 302px;
+	background-image: image-url('slide-bg-bottom.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	padding-top: 4px;
+	padding-left: 6px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption
+{
+	z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item
+{
+	height: 306px;
+}
+.carousel
+{
+	position: relative;
+}
+.carousel-inner
+{
+	position: relative;
+	width: 695px;
+	height: 263px;
+	overflow: hidden;
+}
+.carousel-inner > .item
+{
+	position: relative;
+	display: none;
+	-webkit-transition: .6s ease-in-out left;
+	-o-transition: .6s ease-in-out left;
+	transition: .6s ease-in-out left;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img
+{
+	line-height: 1;
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev
+{
+	display: block;
+}
+.carousel-inner > .active
+{
+	left: 0;
+}
+.carousel-inner > .next, .carousel-inner > .prev
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.carousel-inner > .next
+{
+	left: 100%;
+}
+.carousel-inner > .prev
+{
+	left: -100%;
+}
+.carousel-inner > .next.left, .carousel-inner > .prev.right
+{
+	left: 0;
+}
+.carousel-inner > .active.left
+{
+	left: -100%;
+}
+.carousel-inner > .active.right
+{
+	left: 100%;
+}
+.carousel-control
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 15%;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+.carousel-indicators {
+	width: 689px;
+	position: absolute;
+	z-index: 15;
+	text-align: right;
+	list-style: none;
+	margin-left: -40px;
+	bottom: 0px;
+	margin-bottom: 5px;
+	margin-right: 16px;
+}
+.carousel-indicators li
+{
+	display: inline-block;
+	text-indent: -999px;
+	cursor: pointer;
+	width: 27px;
+	height: 28px;
+	background-image: image-url('button.png');
+	background-position: 0px -15px;
+	background-repeat: no-repeat;
+}
+.carousel-indicators .active
+{
+	width: 27px;
+	height: 43px;
+	background-image: image-url('button.png');
+	background-position: -27px 0px;
+	background-repeat: no-repeat;
+}
+.carousel-caption
+{
+	position: absolute;
+	bottom: 55px;
+	left: 25px;
+	z-index: 10;
+	width: 632px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 15px;
+	border-radius: 4px;
+	color: white;
+	text-shadow: 0px 2px 2px #000, 0px 2px 4px #000;
+	font-family: 'PT SANS';
+	font-size: 13px;
+}
+.carousel-caption .slide-title
+{
+	font-size: 18px;
+	font-weight: bolder;
+	text-shadow: 0px 2px 2px #000, 0px 2px 4px #000, -1px 0px 0px #000, 0px -1px 0px #000, 1px 0px 0px #000, 0px 1px 0px #000;
+	color: #A37F37;
+    text-transform: uppercase;
+}
+.carousel-caption .btn
+{
+	text-shadow: none;
+}
+
+.diapo
+{
+	background-repeat: no-repeat;
+}
+
+.modal-open
+{
+	overflow: hidden;
+	padding-right:0px !important;
+}
+.modal
+{
+	position: fixed;
+	top: 200px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	overflow: hidden;
+	outline: 0;
+}
+.modal-open .modal
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-dialog
+{
+	position: relative;
+	width: auto;
+}
+.modal-content
+{
+	position: relative;
+	outline: 0;
+}
+.modal-backdrop
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+}
+.modal-backdrop.fade
+{
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+.modal-backdrop.in
+{
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+.modal-header
+{
+	height:45px;
+	width:580px;
+	background-image:image-url('modal-top.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    padding-top:16px;
+    padding-left:20px;
+	margin-bottom:-16px;	
+}
+.modal-header .close 
+{
+	float:right;
+	border:none;
+	background-color:transparent;
+    color:#ffd3b0;
+    font-family:'PT Sans';
+    text-shadow:0px 2px 2px #000, 0px 2px 4px #000;
+    font-size:16px;
+    font-weight: bolder;
+    opacity:0.6;
+	margin-right:10px;
+}
+.modal-header .close:hover
+{
+	color:#A37F37;
+}
+.modal-title
+{
+    color:#ffd3b0;
+    font-family:'PT Sans';
+    text-shadow:0px 2px 2px #000, 0px 2px 4px #000;
+    font-size:16px;
+    font-weight: bolder;
+    opacity:0.6;
+	margin:0px;
+	float:left;
+}
+.modal-body 
+{
+	position:relative;
+	width:550px;
+	height:85px;
+	background-image:image-url('modal-middle.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+	padding-left:25px;
+	padding-right:25px;
+	padding-bottom:15px;
+}
+.modal-body p
+ {
+	font-size:13px;
+	font-family:'PT SANS';
+	text-shadow:0px 2px 2px #000, 0px 2px 4px #000;
+	color:#705E54;
+}
+.modal-footer
+{
+	width:600px;
+	height:61px;
+	background-image:image-url('modal-end.png');
+}
+.modal-footer .btn
+{
+    width:124px;
+    height:44px;
+    background-image:image-url('icon.png');
+    background-repeat: no-repeat;
+    background-position: 0px -78px;
+	background-color:transparent;
+	border:none;
+    text-shadow:0px 2px 2px #000, 0px 2px 4px #000;
+    color:#ffd3b0;
+    font-family:'PT Sans';
+    font-size:15px;
+    font-weight: bolder;
+	margin-left:238px;
+}
+.modal-footer .btn:hover
+{
+    background-position: -124px -78px;
+}
+.modal-footer .btn:active
+{
+    background-position: -248px -78px;
+}
+.modal-scrollbar-measure
+{
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+.modal-dialog {
+		width: 600px;
+		margin: 30px auto;
+}

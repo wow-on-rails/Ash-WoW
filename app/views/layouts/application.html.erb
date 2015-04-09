@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AshWow</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ash-WoW</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+  	<%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="page">
+	<div id="main">
+		<header>
+			<div id="logo">
+				<a href="#"></a>
+			</div>
+		</header>
+		<div id="body">
+			<div id="body-top">
+			</div>
+			<div id="body-middle">
+				<%= render 'layouts/left' %>
+				<%= render 'layouts/right' %>
+			</div>
+		</div>
+		<footer></footer>
+	</div>
+</div>
 </body>
 </html>
