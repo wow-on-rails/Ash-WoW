@@ -9,7 +9,7 @@
 <div id="contenu">
 	<div id="contenu-top">
 		<div id="title">
-			 <%= post.title %>
+			<%= link_to post.title, view_path(post) %>
 		</div>
 		<div id="date">
                 <%= post.updated_at %>
@@ -17,7 +17,7 @@
 	</div>
 	<div id="contenu-middle">
 		<span class="text">
-		<%= post.content %>
+		<%= truncate_html(post.content, length: 440, omission: "...") %>
 		</span>
 	</div>
 	<div id="contenu-end">

@@ -198,7 +198,7 @@ header #logo a
     padding-left: 22px;
     padding-right: 22px;
     float: left;
-    margin-top: -5px;
+    margin-top: 0px;
 }
 #left article #contenu #contenu-top #title
 {
@@ -210,6 +210,13 @@ header #logo a
     font-family: 'PT SANS';
     opacity: 0.6;
 }
+
+#left article #contenu #contenu-top #title a
+{
+    text-decoration: none;
+    color: #FFD3B0;
+}
+
 #left article #contenu #contenu-top #date
 {
     float: right;
@@ -228,6 +235,7 @@ header #logo a
     padding-right: 25px;
     padding-bottom: 15px;
     float: left;
+    word-break: break-all;
 }
 #left article #contenu #contenu-middle .text
 {
