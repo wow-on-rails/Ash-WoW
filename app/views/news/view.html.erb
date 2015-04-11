@@ -4,7 +4,7 @@
 			<%= @post.title %>
 		</div>
 		<div id="date">
-            <%= @post.updated_at %>
+            <%= @post.updated_at.to_formatted_s(:short) %>
         </div>
 	</div>
 	<div id="contenu-middle">
