@@ -308,7 +308,7 @@ header #logo a
     width: 248px;
     height: 35px;
     background-repeat: no-repeat;
-    background-image: image-url('icon.png');
+    background-image: image-url('icon-membership.png');
     background-position: 0 -122px;
     margin-left: 12px;
     padding-top: 4px;
@@ -1032,7 +1032,7 @@ header #logo a
 {
     width: 118px;
     height: 38px;
-    background-image: image-url('icon.png');
+    background-image: image-url('icon-membership.png');
     background-repeat: no-repeat;
     background-position: 0px -78px;
     float: left;
@@ -1856,4 +1856,28 @@ footer #line-colonne .colonne a:active
 #choice-payment-hidden img:hover
 {
     opacity: 1;
+}
+ul.errors
+{
+    text-align: center;
+    padding-bottom: 9px;
+    color: #A12009;
+    font-size: 13px;
+    font-family: "PT SANS";
+    text-shadow: 0px 2px 2px #000, 0px 2px 4px #000;
+    list-style: none;
+}
+.flash.success {
+    text-align: center;
+    color: #357D23;
+    font-size: 13px;
+    font-family: "PT SANS";
+    text-shadow: 0px 2px 2px #000, 0px 2px 4px #000;
+}
+.flash.error {
+    text-align: center;
+    color: #A12009;
+    font-size: 13px;
+    font-family: "PT SANS";
+    text-shadow: 0px 2px 2px #000, 0px 2px 4px #000;
 }
