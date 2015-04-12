@@ -18,33 +18,29 @@
     <span class="text">
     <%= form_for(:user, :html => { id: 'inscription' } ) do |f| %>
     	<%= f.label :email  %>
-        <div id="error_email" class="error_register">
-        </div>
-    	<div id="input">
+    	<%= content_tag(:div, id: 'input') do %>
     		<%= f.email_field :email, class: 'text_form', id: 'email_validation' %>
-    	</div>
-        <div id="error_email2" class="error_register">
-        </div>
-        <%= f.label :email_confirmation %>
-        <div id="input">
+    	<% end %>
+
+    	<%= f.label :email_confirmation  %>
+        <%= content_tag(:div, id: 'input') do %>
         	<%= f.email_field :email_confirmation, class: 'text_form', id: 'email2_validation'  %>
-        </div>
-        <div id="error_password" class="error_register">
-        </div>
-        <%= f.label :password %>
-        <div id="input">
-        	<%= f.password_field :password, class: 'text_form', id: 'password_validation'  %>
-        </div>
-        <div id="error_password2" class="error_register">
-        </div>
-        <%= f.label :password_confirmation %>
-        <div id="input">
-        	<%= f.password_field :password_confirmation, class: 'text_form', id: 'password2_validation'  %>
-        </div>
-        <div id="validate">
-        	<%= f.submit :Register, id: 'valide' %>
-        </div>
         <% end %>
+
+        <%= f.label :password %>
+        <%= content_tag(:div, id: 'input') do %>
+        	<%= f.password_field :password, class: 'text_form', id: 'password_validation'  %>
+        <% end %>
+
+        <%= f.label :password_confirmation %>
+        <%= content_tag(:div, id: 'input') do %>
+        	<%= f.password_field :password_confirmation, class: 'text_form', id: 'password2_validation'  %>
+        <% end %>
+
+        <%= content_tag(:div, id: 'validate') do %>
+        	<%= f.submit :Register, id: 'valide' %>
+        <% end %>
+    <% end %>
     </span>
   </div>
 </div>
