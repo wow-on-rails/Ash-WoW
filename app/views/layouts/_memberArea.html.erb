@@ -1,0 +1,21 @@
+<div id="membership-connected">
+	Hello, <span class="important"><%= current_user.username %></span>
+    <br/>
+		You currently have 
+    <span style='color: #A12009;'>
+        <b>0</b>
+    </span> points.
+    <br/>
+    <ul>
+        <li>
+            <a href="#"> Account management </a>
+        </li>
+        <li>
+            <a href="#" class='buy-points-popup'> Buy points </a>
+        </li>
+        <li>
+            <a href="#"> Vote for us </a>
+        </li>
+    </ul>
+    <%= link_to "Disconnection", log_out_path, :class=> "link" %>
+</div>

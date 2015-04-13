@@ -1,0 +1,14 @@
+<%= form_tag sessions_path do%>
+	<%= content_tag(:div, id: 'user') do %>
+		<%= email_field_tag :username, params[:username], :id => 'pseudo' %>
+	<% end %>
+	<%= content_tag(:div, id: 'password') do %>
+		<%= password_field_tag :password,'', :id => 'pass' %>
+	<% end %>
+	<%= content_tag(:div, id: 'connexion') do %>
+		<%= submit_tag "LOG IN", :id => 'connect' %>
+	<% end %>
+	<a href="#" class="link"> Password forgotten ? </a>
+    <br>
+    <%= link_to 'Create an account', registration_path, :class => 'link' %>
+<% end %>

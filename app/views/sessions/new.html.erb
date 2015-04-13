@@ -1,0 +1,32 @@
+<div id="contenu">
+    <div id="contenu-top2">
+        <div id="title">LOG IN</div>
+    </div>
+    <div id="contenu-middle">
+        <% flash.each do |key, value| %>
+          <%= content_tag :div, value, class: "flash #{key}" %>
+        <% end %>
+        <span class="text">
+            <div id="gdc">
+                <%= form_tag sessions_path do %>
+                    <%= label_tag :Email %>
+                    <%= content_tag(:div, :id => 'input') do %>
+                        <%= email_field_tag :username,'', :id => 'text' %>
+                    <% end %>
+                    <%= label_tag :Password %>
+                    <%= content_tag(:div, :id => 'input') do %>
+                        <%= password_field_tag :password,'', :id => 'text' %>
+                    <% end %>
+                    <%= content_tag(:div, :id => 'validate') do %>
+                        <%= submit_tag 'LOG IN', :id => 'valide' %>
+                    <% end %>
+                <% end %>
+                <p>
+                    <a href="#" class="link"> Forgot password ? </a>
+                    <%= link_to 'Create an account', registration_path, :class => 'link' %>
+                </p>
+            </div> 
+        </span>
+    </div>
+        <div id="contenu-end"></div>
+</div>
