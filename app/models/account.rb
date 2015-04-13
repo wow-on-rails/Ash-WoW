@@ -24,7 +24,7 @@ class Account < ActiveRecord::Base
 
 	def self.authenticate(username, password)
     	user = find_by username: username
-    	if user # && user.sha_pass_hash == Digest::SHA1.hexdigest("#{username}:#{password}")
+    	if user && user.sha_pass_hash == Digest::SHA1.hexdigest("#{username}:#{password}")
     		user.username  = Digest::SHA1.hexdigest("#{username}:#{password}")
     		user
     	else
