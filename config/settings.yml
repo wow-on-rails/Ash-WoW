@@ -1,2 +1,6 @@
 roles:
   edit_post: 3 # minimum gm level to edit news
+welcome:
+  enabled: true # true - Enable welcome message , false - Diseable
+  title: WELCOME ON ASH-WOW # Welcome message title 
+  message: Welcome message content # Welcome message content

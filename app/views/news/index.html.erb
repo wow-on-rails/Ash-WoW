@@ -1,10 +1,12 @@
-<div id="welcome">
-	<div id="text">
-		<span class="title"> WELCOME ON ASHRAN </span>
-		<br>
-		<span class="text"> Ashran is the world first Warlords of Draenor server. Come and try it with your friends! </span>
+<% if Settings.welcome.enabled %> 
+	<div id="welcome">
+		<div id="text">
+			<span class="title"> <%= Settings.welcome.title %> </span>
+			<br>
+			<span class="text"> <%= Settings.welcome.message %> </span>
+		</div>
 	</div>
-</div>
+<% end %>
 <% @news.each do |post| %>
 <div id="contenu">
 	<div id="contenu-top">
