@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   post 'registration' => 'registration#create'
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
+  get 'post/edit/:id' => 'news#edit', as: :edit_post
+  get 'post/new' => 'news#new', as: :create_post
+  post 'post/new' => 'news#create'
+  post 'post/edit/:id' => 'news#update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

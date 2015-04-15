@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mysql2'
 # Truncate html
 gem 'truncate_html'
+# Rails config gem
+gem "rails_config"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

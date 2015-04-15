@@ -1,5 +1,6 @@
 class Account < ActiveRecord::Base
 	self.table_name = "account"
+	has_one :access, :foreign_key => "id"
 
 	attr_accessor :password
 

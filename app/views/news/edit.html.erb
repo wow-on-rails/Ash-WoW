@@ -1,0 +1,37 @@
+<div id="contenu">
+  <div id="contenu-top2">
+    <div id="title">
+      Registration            
+    </div>
+  </div>
+  <div id="contenu-middle">
+  	<% flash.each do |key, value| %>
+	  <%= content_tag :div, value, class: "flash #{key}" %>
+	<% end %>
+	<% if @post.errors.any? %>
+		<ul class="errors">
+			<% for message in @user.errors.full_messages %>
+				<li>* <%= message %> </li>
+			<% end %>
+		</ul>
+	<% end %>
+    <span class="text">
+    <%= form_for(:post, :html => { id: 'inscription' } ) do |f| %>
+    	<%= f.label :title, class: 'edit-post', style: 'display: block; height: 33.5px; width: 80px; padding-top: 9px; float: left; text-align: left;'  %>
+    	<%= content_tag(:div, id: 'input', style: 'margin-left: 80px;' ) do %>
+    		<%= f.text_field :title, class: 'text_form' %>
+    	<% end %>
+
+    	<%= f.label :content, style: 'display: block; height: 33.5px; width: 80px; padding-top: 9px; text-align: left; float: left;' %>
+        <%= content_tag(:div, id: 'textarea-input', style: 'margin-bottom: 7px; padding-left: 4px; padding-top: 4px;') do %>
+        	<%= f.text_area :content, style: 'width: 500px; max-width: 550px; text-align: left; float: left; height: 150px;' %>
+        <% end %>
+
+        <%= content_tag(:div, id: 'validate') do %>
+            <%= f.submit :Save, id: 'valide' %>
+        <% end %>
+    <% end %>
+       
+    </span>
+  </div>
+</div>
