@@ -6,7 +6,7 @@ welcome:
   message: Welcome message content # Welcome message content
 server:
   diff: 15 # Sockect connecion max timeout
-  ip: logon.serwow.ru # Server ip
+  ip: localhost # Server ip
   port: 8085 # Server port
   name: Ash-WoW Realm
   max_players: 1500 # max player cout per realm

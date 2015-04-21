@@ -27,7 +27,10 @@ gem 'mysql2'
 # Truncate html
 gem 'truncate_html'
 # Rails config gem
-gem "rails_config"
+gem 'rails_config'
+
+gem 'pg'
+gem 'rails_12factor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
