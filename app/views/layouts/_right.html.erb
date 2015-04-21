@@ -50,6 +50,27 @@
 		<div id="membership-end">
 		</div>
 	</div>
+	<div id="realm">
+		<div id="realm-top">
+			<span class="title"> REALM </span>
+		</div>
+		<div id="realm-middle">
+			<div id="content">
+				<span class="realm-title"><%= Settings.server.name %></span>
+				<div id="divider">
+				</div>
+				<span class="player-title"> Players </span>
+				<span class="player-number"><span class="<%= server_status %>"> <%= players_online %> / <%= Settings.server.max_players %></span></span>
+				<br/>
+				<div id="realm-bar">
+					<div id="progress" style="width:<%= (players_online * 100) / Settings.server.max_players %>%;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="realm-end">
+		</div>
+	</div>
 	<div id="vote" class="genericbutton">
 		<a href="http://www.ashran.com/vote"> Vote for us </a>
 	</div>
@@ -68,74 +89,5 @@
 	</div>
 	<div id="forum" class="genericbutton">
 		<a href="http://forum.ashran.com/"> FORUM </a>
-	</div>
-	<div id="realm">
-		<div id="realm-top">
-			<span class="title"> REALM </span>
-		</div>
-		<div id="realm-middle">
-			<div id="content">
-				<span class="realm-title">US - Grommash </span>
-				<div id="divider">
-				</div>
-				<span class="player-title"> Players </span>
-				<span class="player-number"><span class="online"> 864/1500</span></span>
-				<br/>
-				<div id="realm-bar">
-					<div id="progress" style="width:57.6%;">
-					</div>
-				</div>
-			</div>
-			<div id="content">
-				<span class="realm-title">FR - Main Noire </span>
-				<div id="divider">
-				</div>
-				<span class="player-title"> Players </span>
-				<span class="player-number"><span class="online"> 456/1500</span></span>
-				<br/>
-				<div id="realm-bar">
-					<div id="progress" style="width:30.4%;">
-					</div>
-				</div>
-			</div>
-			<div id="content">
-				<span class="realm-title">ES - Sombraluna </span>
-				<div id="divider">
-				</div>
-				<span class="player-title"> Players </span>
-				<span class="player-number"><span class="online"> 955/1500</span></span>
-				<br/>
-				<div id="realm-bar">
-					<div id="progress" style="width:63.666666666667%;">
-					</div>
-				</div>
-			</div>
-			<div id="content">
-				<span class="realm-title">RU - Thrall </span>
-				<div id="divider">
-				</div>
-				<span class="player-title"> Players </span>
-				<span class="player-number"><span class="online"> 232/1500</span></span>
-				<br/>
-				<div id="realm-bar">
-					<div id="progress" style="width:15.466666666667%;">
-					</div>
-				</div>
-			</div>
-			<div id="content">
-				<span class="realm-title">Ashran : Total Players</span>
-				<div id="divider">
-				</div>
-				<span class="player-title"> Players </span>
-				<span class="player-number"><span class="online"> 2507/6000</span></span>
-				<br/>
-				<div id="realm-bar">
-					<div id="progress" style="width:41.783333333333%;">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="realm-end">
-		</div>
 	</div>
 </div>

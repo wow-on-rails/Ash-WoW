@@ -1,7 +1,7 @@
 <div id="contenu">
   <div id="contenu-top2">
     <div id="title">
-      Registration            
+      Add post            
     </div>
   </div>
   <div id="contenu-middle">
@@ -24,7 +24,8 @@
 
     	<%= f.label :content, style: 'display: block; height: 33.5px; width: 80px; padding-top: 9px; text-align: left; float: left;' %>
         <%= content_tag(:div, id: 'textarea-input', style: 'margin-bottom: 7px; padding-left: 4px; padding-top: 4px;') do %>
-        	<%= f.text_area :content, style: 'width: 500px; max-width: 550px; text-align: left; float: left; height: 150px;' %>
+        	<%= f.text_area :content, style: 'width: 500px; max-width: 550px; text-align: left; float: left; height: 150px;
+            background-color: rgb(17, 16, 15); border: 1px solid #24211E; border-radius: 3px; padding: 5px;' %>
         <% end %>
 
         <%= content_tag(:div, id: 'validate') do %>
