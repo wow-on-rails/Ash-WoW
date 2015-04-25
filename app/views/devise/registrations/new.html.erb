@@ -1,0 +1,37 @@
+<div id="contenu">
+  <div id="contenu-top2">
+    <div id="title">
+      Registration            
+    </div>
+  </div>
+  <div id="contenu-middle">
+    <span class="text">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { id: 'inscription' }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.label :email  %>
+      <%= content_tag(:div, id: 'input') do %>
+        <%= f.email_field :email, autofocus: true, class: 'text_form', id: 'email_validation' %>
+      <% end %>
+
+      <%= f.label :email_confirmation  %>
+        <%= content_tag(:div, id: 'input') do %>
+          <%= f.email_field :email_confirmation, class: 'text_form', id: 'email2_validation'  %>
+        <% end %>
+
+        <%= f.label :password %>
+        <%= content_tag(:div, id: 'input') do %>
+          <%= f.password_field :password, class: 'text_form', id: 'password_validation'  %>
+        <% end %>
+
+        <%= f.label :password_confirmation %>
+        <%= content_tag(:div, id: 'input') do %>
+          <%= f.password_field :password_confirmation, class: 'text_form', id: 'password2_validation'  %>
+        <% end %>
+
+        <%= content_tag(:div, id: 'validate') do %>
+          <%= f.submit :Register, id: 'valide' %>
+        <% end %>
+    <% end %>
+    </span>
+  </div>
+</div>

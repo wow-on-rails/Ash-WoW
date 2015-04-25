@@ -28,6 +28,9 @@ gem 'mysql2'
 gem 'truncate_html'
 # Rails config gem
 gem "rails_config"
+# Devise
+gem 'devise'
+gem 'devise-encryptable'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

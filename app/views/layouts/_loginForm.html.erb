@@ -1,6 +1,6 @@
-<%= form_tag sessions_path do%>
+<%= form_for(:account, :url => session_path(:account)) do |f| %>
 	<%= content_tag(:div, id: 'user') do %>
-		<%= email_field_tag :username, params[:username], :id => 'pseudo' %>
+		<%= email_field_tag :email, params[:email], :id => 'pseudo' %>
 	<% end %>
 	<%= content_tag(:div, id: 'password') do %>
 		<%= password_field_tag :password,'', :id => 'pass' %>
@@ -8,7 +8,7 @@
 	<%= content_tag(:div, id: 'connexion') do %>
 		<%= submit_tag "LOG IN", :id => 'connect' %>
 	<% end %>
-	<a href="#" class="link"> Password forgotten ? </a>
+	<%= link_to "Password forgotten ?", new_password_path(:account), :class => 'link' %>
     <br>
-    <%= link_to 'Create an account', registration_path, :class => 'link' %>
+    <%= link_to 'Create an account', registration_path(:account), :class => 'link' %>
 <% end %>

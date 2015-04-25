@@ -1,5 +1,5 @@
 <div id="membership-connected">
-	Hello, <span class="important"><%= current_user.username %></span>
+	Hello, <span class="important"><%= current_account.username %></span>
     <br/>
 		You currently have 
     <span style='color: #A12009;'>
@@ -8,7 +8,7 @@
     <br/>
     
     <ul>
-        <% if(current_user.access.gmlevel >= 3) %>
+        <% if(current_account.access && current_account.access.gmlevel >= 3) %>
         <li>
             <%= link_to 'Add post', create_post_path %>
         </li>

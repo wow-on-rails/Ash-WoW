@@ -41,7 +41,7 @@
 			</div>
 		</div>
 		<div id="membership-middle">
-			<% if current_user %>
+			<% if account_signed_in? %>
 		    	<%= render 'layouts/memberArea' %>
 			<% else %>
 		    	<%= render 'layouts/loginForm' %>
